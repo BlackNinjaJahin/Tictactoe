@@ -1,0 +1,130 @@
+/* General styles */
+body {
+   font-family: 'Arial', sans-serif;
+   background: linear-gradient(135deg, #8052ec, #d161ff);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
+   margin: 0;
+}
+
+h1 {
+   color: #333;
+   margin-bottom: 20px;
+}
+
+#turn {
+   font-size: 1.2rem;
+   font-weight: bold;
+   margin-bottom: 10px;
+   color: #555;
+}
+
+/* Game container */
+.game-container {
+   text-align: center;
+   max-width: 300px;
+   margin: 0 auto;
+}
+
+/* Tic Tac Toe board */
+.board {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 5px;
+   margin: 20px 0;
+}
+
+.button-option {
+   width: 90px;
+   height: 90px;
+   font-size: 1.8rem;
+   font-weight: bold;
+   color: #333;
+   background-color: #fff;
+   border: 2px solid #ddd;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: transform 0.2s, background-color 0.3s;
+}
+
+.button-option:hover {
+   background-color: #f0f0f0;
+   transform: scale(1.05);
+}
+
+.button-option:active {
+   transform: scale(0.95);
+}
+
+.winner {
+   background-color: gold;
+   color: #000;
+   animation: blink 1s infinite;
+}
+
+/* Popup styles */
+.popup {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background-color: #fff;
+   border: 2px solid #ddd;
+   border-radius: 10px;
+   padding: 20px;
+   text-align: center;
+   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+   display: none; /* Hidden by default */
+}
+
+.popup p {
+   font-size: 1.5rem;
+   margin-bottom: 15px;
+   color: #333;
+}
+
+.popup button {
+   font-size: 1rem;
+   padding: 10px 20px;
+   background-color: #007bff;
+   color: #fff;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s;
+}
+
+.popup button:hover {
+   background-color: #0056b3;
+}
+
+.popup.hide {
+   display: none;
+}
+
+/* Restart button */
+#restart {
+   font-size: 1rem;
+   padding: 10px 20px;
+   margin-top: 10px;
+   background-color: #0a0027;
+   color: #fff;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s;
+}
+
+#restart:hover {
+   background-color: #5a6268;
+}
+
+/* Animations */
+@keyframes blink {
+   50% {
+       opacity: 0.5;
+   }
+}
